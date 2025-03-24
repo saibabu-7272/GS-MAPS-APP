@@ -1,0 +1,25 @@
+.card{
+    height:50px;
+    width:200px;
+    margin:10px;
+
+
+}
+.card-btn{
+    height:100%;
+    width:100%;
+    border:none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #ffffff;
+    border-left: 5px solid rgb(247, 193, 76);
+   
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow:5px 5px 5px #cacaca;
+}
+.card-btn:hover{
+    background-color: rgb(56, 53, 53);
+    color:#ffffff
+}
