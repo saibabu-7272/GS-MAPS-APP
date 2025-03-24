@@ -3,7 +3,6 @@ import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import Header from '../Header'
 
-
 const position = [20.5937, 78.9629]; 
 
 const MapView = () =>{
