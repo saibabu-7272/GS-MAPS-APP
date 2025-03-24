@@ -60,14 +60,15 @@ cd react-maps-app
 
 ## API Endpoints
 ### Authentication
-- `POST /api/login` - Authenticates user and returns JWT token
+- `POST https://gs-maps-app-api.onrender.com/login` - Authenticates user and returns JWT token
+- `POST https://gs-maps-app-api.onrender.com/register` - Creates a new user account
 
 ### Protected Routes
 - `GET /api/dashboard` - Returns dashboard data (Protected)
 - `GET /api/map` - Returns map configuration (Protected)
 
 ## Deployment
-- **Frontend**: Deployed on Render
+- **Frontend**: Deployed on Render [Live App](https://gs-maps-app.onrender.com)
 - **Backend**: Deployed on Render
 
 ## Usage
@@ -94,5 +95,4 @@ Since account creation is not implemented yet, use the following credentials to 
 
 ## Author
 **Sai Babu**
-
 
