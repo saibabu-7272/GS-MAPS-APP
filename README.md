@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# React Maps App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This project is a React application that integrates a map using **Leaflet**, implements **JWT-based authentication**, and features a secure login system. The backend is built with **Node.js and Express**, and the database is **SQLite** with password hashing using **bcrypt**. The frontend and backend are deployed on **Render**.
 
-## Available Scripts
+## Features
+- **User Authentication**: Secure login using JWT tokens.
+- **JWT Token Handling**: Token is stored in cookies using `js-cookie`.
+- **Secure Routes**: Protected API endpoints using JWT authentication.
+- **Leaflet Map Integration**: Displays a zoomable map of India.
+- **Interactive Dashboard**: Cards navigate to the map view when clicked.
+- **Deployment**: Fully deployed on **Render** (Frontend & Backend).
 
-In the project directory, you can run:
+## Technologies Used
+### Frontend:
+- React.js
+- React Router
+- Leaflet (for map integration)
+- js-cookie (for managing JWT tokens)
+- CSS (for styling)
 
-### `npm start`
+### Backend:
+- Node.js & Express
+- SQLite (Database)
+- bcrypt (for password hashing)
+- JWT (for authentication)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation & Setup
+### Prerequisites
+- Node.js & npm installed
+- Git installed
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Clone the Repository
+```sh
+git clone <repository_url>
+cd react-maps-app
+```
 
-### `npm test`
+### Backend Setup
+1. Install dependencies:
+   ```sh
+   cd backend
+   npm install
+   ```
+2. Run the server:
+   ```sh
+   node server.js
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend Setup
+1. Install dependencies:
+   ```sh
+   cd frontend
+   npm install
+   ```
+2. Start the React application:
+   ```sh
+   npm start
+   ```
 
-### `npm run build`
+## API Endpoints
+### Authentication
+- `POST /api/login` - Authenticates user and returns JWT token
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Protected Routes
+- `GET /api/dashboard` - Returns dashboard data (Protected)
+- `GET /api/map` - Returns map configuration (Protected)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployment
+- **Frontend**: Deployed on Render
+- **Backend**: Deployed on Render
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
+1. Navigate to the login page and enter your credentials.
+2. Upon successful login, you will be redirected to the dashboard.
+3. Click on a card to view the map.
+4. Use zoom in/out functionality to explore the map of India.
 
-### `npm run eject`
+### Test Credentials
+Since account creation is not implemented yet, use the following credentials to log in:
+- **Username**: `sai`
+- **Password**: `1234`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Security Considerations
+- User passwords are **hashed using bcrypt** before storing in SQLite.
+- JWT tokens are used for **secure authentication**.
+- Protected routes ensure **only logged-in users can access** restricted data.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Future Enhancements
+- Add user registration functionality.
+- Implement interactive markers on the map.
+- Improve UI/UX with a design system (Material UI, TailwindCSS, etc.).
+- Enhance dashboard functionality with real-time data.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Author
+**Sai Babu**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
