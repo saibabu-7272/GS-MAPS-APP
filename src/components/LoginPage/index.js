@@ -1,23 +1,13 @@
 import {Component} from 'react'
-
 import Cookies from 'js-cookie'
-
-
-
 import './index.css'
 import { Navigate } from 'react-router-dom'
-
-
-
-
 
 class LoginPage extends Component{
     state = {username : "", password : "" ,errorMsg : "" , isRedirect : false}
     onLogin = async (event) =>{
-        event.preventDefault()
-      
+        event.preventDefault()      
         const {username,password} = this.state
-        
         let data = {
             username,
             password
@@ -33,8 +23,6 @@ class LoginPage extends Component{
             const url = "https://gs-maps-app-api.onrender.com/login"
             const response = await fetch(url, options)
             const resultData = await response.json()
-            console.log(response)
-            console.log(resultData)
             if(response.ok){
                 Cookies.set("jwt_token",resultData.token,{expires:10})
                 this.setState({isRedirect : true})
