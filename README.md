@@ -25,47 +25,14 @@ This project is a React application that integrates a map using **Leaflet**, imp
 - bcrypt (for password hashing)
 - JWT (for authentication)
 
-## Installation & Setup
-### Prerequisites
-- Node.js & npm installed
-- Git installed
-
-### Clone the Repository
-```sh
-git clone <repository_url>
-cd react-maps-app
-```
-
-### Backend Setup
-1. Install dependencies:
-   ```sh
-   cd backend
-   npm install
-   ```
-2. Run the server:
-   ```sh
-   node server.js
-   ```
-
-### Frontend Setup
-1. Install dependencies:
-   ```sh
-   cd frontend
-   npm install
-   ```
-2. Start the React application:
-   ```sh
-   npm start
-   ```
-
 ## API Endpoints
 ### Authentication
 - `POST https://gs-maps-app-api.onrender.com/login` - Authenticates user and returns JWT token
 - `POST https://gs-maps-app-api.onrender.com/register` - Creates a new user account
 
 ### Protected Routes
-- `GET /api/dashboard` - Returns dashboard data (Protected)
-- `GET /api/map` - Returns map configuration (Protected)
+- `/` - Returns dashboard data (Protected) - (Dashboard)
+- `/map` - Returns map configuration (Protected) - (Map page)
 
 ## Deployment
 - **Frontend**: Deployed on Render [Live App](https://gs-maps-app.onrender.com)
@@ -90,7 +57,7 @@ Since account creation is not implemented yet, use the following credentials to 
 ## Future Enhancements
 - Add user registration functionality.
 - Implement interactive markers on the map.
-- Improve UI/UX with a design system (Material UI, TailwindCSS, etc.).
+- Improve UI/UX with a design system.
 - Enhance dashboard functionality with real-time data.
 
 ## Author
